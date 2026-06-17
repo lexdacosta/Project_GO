@@ -27,7 +27,7 @@ func ConectaComBancoDeDados() {
 	}
 
 	if err := DB.AutoMigrate(&models.Aluno{}); err != nil {
-    	log.Panic("Erro ao fazer migrations no banco de dados:", err)
+    	log.Fatal("Erro ao fazer migrations no banco de dados:", err)
 	}
 //	DB.AutoMigrate(&models.Aluno{})
 }

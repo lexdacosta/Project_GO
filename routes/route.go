@@ -21,7 +21,7 @@ func HandleRequest() {
 	r.GET("/index", controllers.ExibePaginaIndex)
 	r.NoRoute(controllers.RotaNaoEncontrada)
 	if err := r.Run(); err != nil {
-    	log.Panic("Erro ao iniciar servidor:", err)
+    	log.Fatal("Erro ao iniciar servidor:", err)
 	}
 	//	r.Run()
 }
